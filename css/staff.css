@@ -3,13 +3,8 @@
 /*Fonts*/
 /*Colors*/
 .employee {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -17,7 +12,6 @@
 .employee-photo {
   width: 220px; }
   .employee-photo img {
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     display: block;
     margin: auto; }

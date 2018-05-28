@@ -156,7 +156,6 @@ Paddings and Margins
 Decorations
 =============================================*/
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*===== Max/Min Dimensions =====*/
@@ -204,32 +203,17 @@ header {
   float: right; }
 
 .grid-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center; }
 
 main .inner-nav-float-right {
   float: right; }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row;
   flex-flow: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center; }
 
 .contacts a {
@@ -242,8 +226,6 @@ footer {
   header, main {
     margin: auto; }
   .subscribe {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
     order: 2; } }
 
 @media (min-width: 1024px) {
@@ -251,8 +233,6 @@ footer {
     float: none;
     margin: auto; }
   .search {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
     order: -1; } }
 
 /*===== Paddings and Margins =====*/
@@ -364,6 +344,8 @@ footer {
   margin: 6px auto;
   border-radius: 10px;
   -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .bar2 {
@@ -376,11 +358,13 @@ footer {
   .nav-button:focus .bar1,
   .nav-button:focus .bar3 {
     -webkit-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
     transform: scaleX(0.8);
     opacity: 0.7; }
   .nav-button:hover .bar2,
   .nav-button:focus .bar2 {
     -webkit-transform: scaleX(2);
+    -ms-transform: scaleX(2);
     transform: scaleX(2);
     opacity: 1; }
 
@@ -450,7 +434,6 @@ footer {
   .nav-item-main:focus {
     outline: none;
     border-radius: 20px;
-    -webkit-box-shadow: 0 0 3pt 2pt #E5ECE9;
     box-shadow: 0 0 3pt 2pt #E5ECE9;
     border-bottom: none; }
 
@@ -463,12 +446,7 @@ footer {
 .nav-hidden-links-visible {
   position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   background: rgba(229, 236, 233, 0.9);
   padding: 5px 0; }
@@ -488,12 +466,8 @@ footer {
   .nav-bar {
     width: auto;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: 0 20px; }
   .nav-item {
@@ -507,14 +481,12 @@ footer {
     border-radius: 20px;
     border-bottom: 1px dashed white; }
     .nav-item-main:focus {
-      -webkit-box-shadow: 0 0 1pt 1pt #E5ECE9;
       box-shadow: 0 0 1pt 1pt #E5ECE9; }
   .nav-hidden-links-visible {
     width: auto;
     min-width: 160px;
     margin-top: 10px;
     padding: 3px 10px 3px 10px;
-    -webkit-box-shadow: 0 0 3pt 2pt #E5ECE9;
     box-shadow: 0 0 3pt 2pt #E5ECE9; }
     .nav-hidden-links-visible li {
       padding: 1px; }
@@ -549,8 +521,6 @@ figure {
 @media (min-width: 600px) {
   main figure {
     margin-top: 10px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content; }
     main figure img {
       display: block;
@@ -577,12 +547,7 @@ figure {
     .img-right img {
       width: 300px; }
   .img-pair-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row; }
   .img-pair {
     width: 50%;
@@ -590,16 +555,9 @@ figure {
     .img-pair img {
       max-width: 100%; }
   .img-shared-caption {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center; }
   .img-triplet {
     margin: 3px; }
@@ -614,8 +572,6 @@ figure {
   .img-enlarge-on-hover img:hover {
     z-index: 1;
     -webkit-transform: scale(2);
+    -ms-transform: scale(2);
     transform: scale(2);
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; } }
+    transition: transform 0.5s ease-in-out; } }
