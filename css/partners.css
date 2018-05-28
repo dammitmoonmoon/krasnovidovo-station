@@ -1,0 +1,49 @@
+/* LOGO Sizes */
+/*Maximum width of content sections */
+/*Fonts*/
+/*Colors*/
+main {
+  width: 100%; }
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+img {
+  max-width: 220px;
+  margin: auto; }
+
+.logo-too-large {
+  max-width: 150px; }
+
+.partner {
+  max-width: 220px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .partner > div {
+    height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .partner p {
+    text-align: center; }
+
+@media (min-width: 600px) {
+  .partner {
+    min-width: 300px; } }
