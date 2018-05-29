@@ -37,6 +37,28 @@
 .extra-space-above {
   padding-top: 40px; }
 
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.gallery__img {
+  max-width: 200px;
+  width: 100%;
+  padding: 5px; }
+
+@supports (display: grid) {
+  .gallery__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 150px;
+    justify-content: space-around;
+    grid-gap: 10px; }
+  .gallery__img--150-200 {
+    grid-row-end: span 2;
+    place-self: center; } }
+
 .contacts__link {
   color: #0A94FF; }
   .contacts__link:hover {
