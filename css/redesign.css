@@ -41,7 +41,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  justify-items: center; }
 
 .gallery__img {
   max-width: 200px;
@@ -56,8 +57,7 @@
     justify-content: space-around;
     grid-gap: 10px; }
   .gallery__img--150-200 {
-    grid-row-end: span 2;
-    place-self: center; } }
+    grid-row-end: span 2; } }
 
 .contacts__link {
   color: #0A94FF; }
