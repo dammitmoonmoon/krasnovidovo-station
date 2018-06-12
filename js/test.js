@@ -1,1 +1,0 @@
-"use strict";var image1=document.querySelector(".image"),image2=document.querySelector(".image2");image1.addEventListener("click",function(){});
