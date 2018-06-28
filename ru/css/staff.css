@@ -1,0 +1,40 @@
+/* LOGO Sizes */
+/*Maximum width of content sections */
+/*Fonts*/
+/*Colors*/
+.employee {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.employee-photo {
+  width: 220px; }
+  .employee-photo img {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: auto; }
+
+.employee-data {
+  width: 220px;
+  text-align: center;
+  border-bottom: 1px dashed #062F4F; }
+
+@media (min-width: 600px) {
+  .employee-data {
+    width: 400px;
+    text-align: left;
+    border-bottom: none; }
+  .employee-data-personal {
+    width: auto; } }
+
+@media (min-width: 1024px) {
+  .employee-personal {
+    float: left; }
+    .employee-personal .employee-photo {
+      width: auto; } }
+
+.employee-name {
+  font-weight: bold;
+  color: #062F4F; }

@@ -1,0 +1,577 @@
+/* LOGO Sizes */
+/*Maximum width of content sections */
+/*Fonts*/
+/*Colors*/
+/*HEADER*/
+/*=====BASIC LAYOUT: Three-row grid, sticky footer*/
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; }
+
+/*====== ELEMENT VISIBILITY =====*/
+.hidden-lang {
+  display: none !important; }
+
+.grid-logo-faculty-img {
+  display: none; }
+
+.hide-in-mobile {
+  display: none; }
+
+@media (min-width: 600px) {
+  .hide-in-desktop {
+    display: none; }
+  .hide-in-mobile {
+    display: block; } }
+
+@media (min-width: 600px) {
+  .grid-logo-faculty-img {
+    display: inline-block; }
+  .mobile-only {
+    display: none; } }
+
+/*===== GRID LAYOUTS: HEADER AND FOOTER =====*/
+header {
+  display: grid;
+  grid-template-areas: "language" "logo-msu" "logo-faculty" "title" "navigation"; }
+
+@media (min-width: 600px) {
+  header {
+    grid-template-columns: 240px 1fr 1fr 240px;
+    grid-template-areas: ". . . language" "logo-msu . . logo-faculty" "title title title title" "navigation navigation navigation navigation"; } }
+
+@media (min-width: 1024px) {
+  header {
+    grid-template-columns: 1fr 240px minmax(300px, 600px) 240px 1fr;
+    grid-template-rows: auto 25px auto;
+    grid-template-areas: ". logo-msu  title logo-faculty ." ". logo-msu language logo-faculty ." "navigation navigation  navigation navigation navigation"; } }
+
+.grid-logo-msu {
+  grid-area: logo-msu; }
+
+.grid-logo-faculty {
+  grid-area: logo-faculty; }
+
+.grid-title {
+  grid-area: title; }
+
+.grid-language {
+  grid-area: language; }
+
+.grid-nav {
+  grid-area: navigation; }
+
+/*===== Fonts and text styles (except navbar) =====*/
+html {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  font-family: "Open Sans", sans-serif; }
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif; }
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2em;
+  font-weight: bold; }
+
+h2 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5em;
+  font-weight: bold; }
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-weight: bold;
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+input {
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  line-height: 0; }
+
+.grid-logo-msu p {
+  line-height: 1.2em; }
+
+.grid-logo-faculty p {
+  line-height: 1.2em; }
+
+main h1 {
+  color: #062F4F; }
+
+main p {
+  padding: 10px;
+  line-height: 1.3em; }
+
+footer {
+  font-size: 13px; }
+  footer h3 {
+    text-align: center; }
+
+.contacts > a {
+  line-height: 1.2em; }
+
+.contacts > a:first-of-type {
+  text-align: center; }
+
+.address {
+  text-align: center; }
+
+@media (min-width: 600px) {
+  html {
+    font-size: 16px; }
+  .grid-logo-msu p {
+    line-height: 1.5em; }
+  .grid-logo-faculty p {
+    line-height: 3em; }
+  h1 {
+    line-height: 1.5em;
+    font-size: 22px; } }
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 30px; } }
+
+/*===========================================
+General layout. 
+* NavBar and Hamburger ==> _header.scss
+* Grids and language classes ==> _g-grid.scss
+* Fonts (ex. colors) ==> _g-fonts.scss
+
+Max/Min Dimensions
+Alignments
+Paddings and Margins
+Decorations
+=============================================*/
+* {
+  box-sizing: border-box; }
+
+/*===== Max/Min Dimensions =====*/
+html {
+  height: 100%;
+  max-height: 1000px; }
+
+body {
+  max-width: 100vw;
+  min-height: 98%; }
+
+header {
+  width: 100%;
+  max-width: 100%; }
+
+.logo svg {
+  height: 60px;
+  width: 60px; }
+
+#email, #search {
+  max-width: 200px; }
+
+@media (min-width: 600px) {
+  header {
+    max-width: 1200px; }
+  main {
+    max-width: 950px; }
+  .logo svg {
+    height: 80px;
+    width: 80px; } }
+
+@media (min-width: 1024px) {
+  .logo svg {
+    height: 100px;
+    width: 100px; } }
+
+/*===== Alignments =====*/
+a {
+  display: inline-block; }
+
+header {
+  text-align: center; }
+
+.grid-language input {
+  float: right; }
+
+.grid-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+main .inner-nav-float-right {
+  float: right; }
+
+footer {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.contacts a {
+  display: block; }
+
+.contacts i {
+  display: none; }
+
+@media (min-width: 600px) {
+  header, main {
+    margin: auto; }
+  .subscribe {
+    order: 2; } }
+
+@media (min-width: 1024px) {
+  .grid-language input {
+    float: none;
+    margin: auto; }
+  .search {
+    order: -1; } }
+
+/*===== Paddings and Margins =====*/
+header {
+  margin: auto; }
+
+section {
+  padding: 5px; }
+
+footer {
+  margin: 20px auto 0 auto; }
+
+input {
+  padding: 10px; }
+
+.grid-logo-msu {
+  margin-bottom: 10px; }
+
+h1 {
+  margin: 10px 0; }
+
+@media (min-height: 400px) {
+  .extra-space-above {
+    padding-top: 50px; } }
+
+footer h3 {
+  padding-bottom: 5px; }
+
+footer #email, footer #search {
+  padding: 0px;
+  margin: 5px 0; }
+
+footer > * {
+  padding: 10px 5px;
+  margin: 5px 0; }
+
+@media (min-width: 600px) {
+  header {
+    padding: 5px;
+    margin-bottom: 20px; }
+  h1 {
+    margin: 0 0 10px 0; } }
+
+/*===== Decorations =====*/
+h1, h2 {
+  color: #0a4b7e; }
+
+h3 {
+  color: #062F4F; }
+
+a {
+  color: inherit; }
+
+em, strong {
+  color: #062F4F; }
+
+input {
+  border-radius: 5px; }
+
+.logo svg {
+  height: 60px;
+  width: 60px;
+  fill: #062F4F; }
+
+main h1 {
+  color: #062F4F; }
+
+main i {
+  color: #062F4F; }
+
+main .inner-nav-float-right {
+  border-bottom: 1px dashed black;
+  font-weight: bold; }
+
+footer {
+  color: #E5ECE9;
+  background: #062F4F;
+  border-radius: 5px; }
+  footer h3 {
+    color: white; }
+  footer > * {
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white; }
+
+@media (min-width: 600px) {
+  html {
+    font-size: 16px; }
+  header {
+    color: white;
+    background: #062F4F;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px; }
+  .logo svg {
+    height: 60px;
+    width: 60px;
+    fill: white; }
+  h1 {
+    color: white; } }
+
+/*===== HEADER =====*/
+.nav-button {
+  cursor: pointer;
+  margin-bottom: 10px; }
+
+.bar1, .bar2, .bar3 {
+  width: 70px;
+  height: 5px;
+  background-color: #062F4F;
+  margin: 6px auto;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.bar2 {
+  opacity: 0.7; }
+
+.nav-button:hover,
+.nav-button:focus {
+  outline: none; }
+  .nav-button:hover .bar1, .nav-button:hover .bar3,
+  .nav-button:focus .bar1,
+  .nav-button:focus .bar3 {
+    -webkit-transform: scaleX(0.8);
+    -ms-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    opacity: 0.7; }
+  .nav-button:hover .bar2,
+  .nav-button:focus .bar2 {
+    -webkit-transform: scaleX(2);
+    -ms-transform: scaleX(2);
+    transform: scaleX(2);
+    opacity: 1; }
+
+@media (min-height: 380px) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #E5ECE9;
+    width: 100%;
+    margin: auto; }
+  .anti-sticky {
+    margin-top: 60px; } }
+
+@media (min-width: 600px) {
+  .sticky {
+    background: #062F4F; }
+    .sticky > * {
+      margin: 0;
+      padding: 0;
+      line-height: 1em; }
+    .sticky .nav-item-main {
+      border: 1px solid white;
+      min-width: 100px;
+      font-size: 16px;
+      line-height: 1em;
+      border-bottom: none;
+      padding: 0 10px; } }
+
+@media (min-width: 1024px) {
+  .sticky {
+    left: inherit;
+    max-width: 1200px; }
+    .sticky .nav-bar {
+      margin: 0; }
+    .sticky .nav-item-main {
+      border-radius: 20px;
+      min-width: 100px;
+      font-size: 18px;
+      line-height: 1em;
+      border-bottom: none;
+      padding: 0 10px; } }
+
+.nav-bar {
+  position: absolute;
+  width: 100%;
+  display: block;
+  background: #062F4F; }
+  .nav-bar > div:nth-child(odd) {
+    background: #4e5f6d; }
+  .nav-bar > * {
+    border-bottom: 1px dashed white; }
+
+.nav-item {
+  padding: 5px 0; }
+
+.nav-item-main {
+  cursor: pointer;
+  padding: 5px 3px;
+  border: none;
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: white; }
+  .nav-item-main:focus {
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 3pt 2pt #E5ECE9;
+    border-bottom: none; }
+
+.hide-nav-bar {
+  display: none; }
+
+.nav-hidden-links {
+  display: none !important; }
+
+.nav-hidden-links-visible {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(229, 236, 233, 0.9);
+  padding: 5px 0; }
+  .nav-hidden-links-visible li {
+    display: block;
+    color: black;
+    line-height: 1.1em;
+    font-size: 16px; }
+    .nav-hidden-links-visible li a {
+      display: block;
+      width: 100%;
+      padding: 3px 0; }
+  .nav-hidden-links-visible li:hover a {
+    background: white; }
+
+@media (min-width: 600px) {
+  .nav-bar {
+    width: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 20px; }
+  .nav-item {
+    border-bottom: none;
+    background: #062F4F !important; }
+  .nav-item-main {
+    padding: 5px 0;
+    font-size: 20px;
+    font-variant: small-caps;
+    min-width: 160px;
+    border-radius: 20px;
+    border-bottom: 1px dashed white; }
+    .nav-item-main:focus {
+      box-shadow: 0 0 1pt 1pt #E5ECE9; }
+  .nav-hidden-links-visible {
+    width: auto;
+    min-width: 160px;
+    margin-top: 10px;
+    padding: 3px 10px 3px 10px;
+    box-shadow: 0 0 3pt 2pt #E5ECE9; }
+    .nav-hidden-links-visible li {
+      padding: 1px; }
+    .nav-hidden-links-visible a {
+      font-size: 20px;
+      text-align: left;
+      font-variant: small-caps; }
+    .nav-hidden-links-visible li:hover a {
+      color: #062F4F;
+      background: none; } }
+
+@media (min-width: 1024px) {
+  .nav-bar {
+    margin-top: 20px;
+    border-top: 3px solid #E5ECE9; }
+  .nav-item-main {
+    padding: 5px 0;
+    font-size: 22px;
+    border-radius: 0;
+    border-bottom: 1px dashed white; } }
+
+figcaption {
+  text-align: center;
+  font-style: italic; }
+
+figure {
+  width: 98%;
+  margin: auto; }
+  figure img {
+    width: 100%; }
+
+@media (min-width: 600px) {
+  main figure {
+    margin-top: 10px;
+    width: fit-content; }
+    main figure img {
+      display: block;
+      margin: auto; }
+    main figure figcaption {
+      font-size: 14px;
+      text-align: start; }
+  .figcap-center figcaption {
+    text-align: center; }
+  .img-left {
+    display: block;
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px; }
+    .img-left img {
+      width: 300px; }
+  .img-right {
+    display: block;
+    width: 300px;
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px; }
+    .img-right img {
+      width: 300px; }
+  .img-pair-wrapper {
+    display: flex;
+    flex-direction: row; }
+  .img-pair {
+    width: 50%;
+    margin: 3px; }
+    .img-pair img {
+      max-width: 100%; }
+  .img-shared-caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center; }
+  .img-triplet {
+    margin: 3px; }
+    .img-triplet img {
+      width: 32%; }
+  .img-tweens img {
+    width: 48%;
+    margin: 1%; }
+  .img-limit-width {
+    max-width: 70%;
+    margin: auto; }
+  .img-enlarge-on-hover img:hover {
+    z-index: 1;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out; } }

@@ -1,0 +1,37 @@
+/* LOGO Sizes */
+/*Maximum width of content sections */
+/*Fonts*/
+/*Colors*/
+main h1 {
+  color: #062F4F;
+  margin-bottom: 0; }
+
+main h2 {
+  margin: 10px 0;
+  text-align: left; }
+
+main h3 {
+  margin: 10px 0; }
+
+main p {
+  padding: 0 0 10px 0; }
+
+strong {
+  color: black; }
+
+.center {
+  display: none; }
+
+@media (min-width: 600px) {
+  .check-outside {
+    display: none; }
+  .center {
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 0;
+    width: 580px;
+    height: 350px;
+    display: block;
+    margin: 20px auto; } }

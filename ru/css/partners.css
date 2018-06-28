@@ -1,0 +1,35 @@
+/* LOGO Sizes */
+/*Maximum width of content sections */
+/*Fonts*/
+/*Colors*/
+main {
+  width: 100%; }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+img {
+  max-width: 220px;
+  margin: auto; }
+
+.logo-too-large {
+  max-width: 150px; }
+
+.partner {
+  max-width: 220px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .partner > div {
+    height: 150px;
+    display: flex; }
+  .partner p {
+    text-align: center; }
+
+@media (min-width: 600px) {
+  .partner {
+    min-width: 300px; } }

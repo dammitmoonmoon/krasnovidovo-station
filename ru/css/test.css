@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  width: fit-content; }
+
+.image {
+  display: block;
+  height: 300px; }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center; }
+
+.container:hover .overlay {
+  opacity: 1; }
