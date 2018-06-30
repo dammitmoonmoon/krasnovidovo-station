@@ -37,6 +37,96 @@
 .extra-space-above {
   padding-top: 40px; }
 
+.main__table {
+  margin: auto; }
+  .main__table caption {
+    color: #062F4F;
+    padding: 5px;
+    line-height: 1.2em;
+    font-weight: bold; }
+  .main__table tr {
+    border-bottom: 1px dashed #0A94FF; }
+  .main__table td {
+    padding: 5px 15px; }
+
+.index__em {
+  font-size: 16px;
+  color: #062F4F;
+  font-weight: bold; }
+
+.index__heading {
+  text-align: center;
+  color: #062F4F;
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 5px;
+  font-family: "Montserrat", sans-serif; }
+
+.index__section {
+  margin-bottom: 20px; }
+
+.index__section--news {
+  margin: auto;
+  max-width: 400px; }
+
+.news__subsection {
+  margin: 20px 0;
+  font-size: 14px; }
+
+.news__subsection--date {
+  background-color: #f5f7f8;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  font-weight: bold; }
+
+.index__section--map {
+  display: none; }
+
+@media (min-width: 420px) {
+  .index__section--map {
+    display: block;
+    width: 420px;
+    margin: auto; } }
+
+@media (min-width: 600px) {
+  .index {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .index__section {
+    margin-bottom: 5px;
+    font-size: 16px; }
+  .index__section--station {
+    flex-basis: 100%;
+    margin-bottom: 10px; }
+  .index__section--slideshow {
+    padding: 0 35px;
+    margin: auto;
+    flex-basis: 100%; }
+  .index__section--news {
+    margin: 20px auto 10px auto;
+    min-width: 400px; }
+  .index__em,
+  .index__heading {
+    font-size: 18px; }
+  .news__subsection {
+    font-size: 16px; } }
+
+@media (min-width: 1024px) {
+  .index__section--news {
+    flex-basis: 35%; }
+  .index__section--slideshow {
+    flex-basis: 45%; }
+  .index__section--news {
+    margin: 5px;
+    padding: 5px;
+    min-width: 200px; }
+  .index__section--reservoir,
+  .index__section--map {
+    flex-basis: 48%; }
+  .index__section--map {
+    text-align: center; } }
+
 .gallery__link__container {
   display: flex;
   justify-content: space-around;
@@ -162,6 +252,14 @@
   margin: 5px 0; }
   .figure__img:hover {
     box-shadow: 0 0 20px rgba(6, 47, 79, 0.8); }
+
+.figure__img--plain {
+  cursor: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin: 5px 0; }
+  .figure__img--plain:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
 
 .figure__img--hide-in-mobile {
   display: none; }
@@ -593,7 +691,9 @@
     padding: 20px 10px; }
   .modal__sub {
     width: 1000px;
-    margin: auto; } }
+    margin: auto; }
+  .figure--plain {
+    max-width: 70%; } }
 
 /*========================================
 Constants
