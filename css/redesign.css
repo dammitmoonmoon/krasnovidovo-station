@@ -1,3 +1,16 @@
+/* =================================================================
+General layout
+Index section (main page)
+Projects section
+Gallery section
+Contacts
+Logos
+Figures and captions
+Employee cards
+Publications
+Datasets
+Slideshow
+   ================================================================= */
 .main {
   flex: 1;
   padding: 10px 5px;
@@ -82,50 +95,30 @@
 .index__section--map {
   display: none; }
 
-@media (min-width: 420px) {
-  .index__section--map {
-    display: block;
-    width: 420px;
-    margin: auto; } }
+.projects {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.3em;
+  padding: 5px 0; }
+  .projects em {
+    font-style: italic; }
+  .projects strong {
+    font-weight: bold; }
 
-@media (min-width: 600px) {
-  .index {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  .index__section {
-    margin-bottom: 5px;
-    font-size: 16px; }
-  .index__section--station {
-    flex-basis: 100%;
-    margin-bottom: 10px; }
-  .index__section--slideshow {
-    padding: 0 35px;
-    margin: auto;
-    flex-basis: 100%; }
-  .index__section--news {
-    margin: 20px auto 10px auto;
-    min-width: 400px; }
-  .index__em,
-  .index__heading {
-    font-size: 18px; }
-  .news__subsection {
-    font-size: 16px; } }
+.projects__title {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.3em;
+  padding: 10px 0;
+  color: #062F4F;
+  font-weight: bold; }
 
-@media (min-width: 1024px) {
-  .index__section--news {
-    flex-basis: 35%; }
-  .index__section--slideshow {
-    flex-basis: 45%; }
-  .index__section--news {
-    margin: 5px;
-    padding: 5px;
-    min-width: 200px; }
-  .index__section--reservoir,
-  .index__section--map {
-    flex-basis: 48%; }
-  .index__section--map {
-    text-align: center; } }
+.projects__text {
+  padding-top: 10px; }
+
+.projects__list {
+  list-style-type: decimal;
+  padding: 5px 0 0 20px; }
 
 .gallery__link__container {
   display: flex;
@@ -403,67 +396,6 @@
   font-weight: normal;
   font-style: italic; }
 
-@media (min-width: 600px) {
-  .dataset__plot {
-    display: block;
-    margin: auto;
-    min-width: 200px;
-    max-width: 80%; }
-  .dataset__plot__parameter {
-    padding: 5px 0; }
-    .dataset__plot__parameter label {
-      padding-right: 5px;
-      font-weight: normal; }
-    .dataset__plot__parameter select {
-      padding: 5px;
-      border: none;
-      border-radius: 10px;
-      background-color: #39454F;
-      font-size: 14px;
-      text-align: center;
-      line-height: 1.5em;
-      color: white;
-      font-weight: 600;
-      letter-spacing: 0.1ch; }
-    .dataset__plot__parameter input[type=submit] {
-      padding: 5px;
-      border: none;
-      border-radius: 10px;
-      background-color: #0A94FF;
-      font-size: 14px;
-      text-align: center;
-      line-height: 1.5em;
-      color: white;
-      font-weight: 600;
-      letter-spacing: 0.1ch; }
-  .datasets .dataset__button {
-    margin: 10px auto;
-    width: 350px; }
-  .dataset__controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-  .dataset__button {
-    font-size: 16px;
-    margin: 10px; }
-  .dataset__subtitle {
-    font-style: italic;
-    padding: 10px 0;
-    color: #062F4F;
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.3em; }
-    .dataset__subtitle li {
-      color: black;
-      padding: 0 0 10px 10px;
-      font-style: normal; }
-    .dataset__subtitle p {
-      color: black;
-      padding-left: 10px;
-      font-style: normal; }
-    .dataset__subtitle strong {
-      font-weight: bold; } }
-
 .slideshow {
   width: 100%;
   margin: auto; }
@@ -515,17 +447,13 @@
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
   overflow: auto; }
 
 .modal__sub {
@@ -563,6 +491,12 @@
   text-decoration: none;
   cursor: pointer; }
 
+@media (min-width: 420px) {
+  .index__section--map {
+    display: block;
+    width: 420px;
+    margin: auto; } }
+
 @media (min-width: 600px) {
   .main__h1 {
     font-size: 25px;
@@ -570,6 +504,33 @@
   .main__text p {
     padding: 10px;
     font-size: 16px; }
+  .index {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .index__section {
+    margin-bottom: 5px;
+    font-size: 16px; }
+  .index__section--station {
+    flex-basis: 100%;
+    margin-bottom: 10px; }
+  .index__section--slideshow {
+    padding: 0 35px;
+    margin: auto;
+    flex-basis: 100%; }
+  .index__section--news {
+    margin: 20px auto 10px auto;
+    min-width: 400px; }
+  .index__em,
+  .index__heading {
+    font-size: 18px; }
+  .news__subsection {
+    font-size: 16px; }
+  .projects {
+    font-size: 16px;
+    padding: 0 10px; }
+  .projects__title {
+    font-size: 18px; }
   .inner__nav {
     text-align: right; }
   .contacts__wrapper {
@@ -654,6 +615,65 @@
     padding-right: 15px; }
   .employee__data__page {
     margin: 0; }
+  .dataset__plot {
+    display: block;
+    margin: auto;
+    min-width: 200px;
+    max-width: 80%; }
+  .dataset__plot__parameter {
+    padding: 5px 0; }
+    .dataset__plot__parameter label {
+      padding-right: 5px;
+      font-weight: normal; }
+    .dataset__plot__parameter select {
+      padding: 5px;
+      border: none;
+      border-radius: 10px;
+      background-color: #39454F;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.5em;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.1ch; }
+    .dataset__plot__parameter input[type=submit] {
+      padding: 5px;
+      border: none;
+      border-radius: 10px;
+      background-color: #0A94FF;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.5em;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.1ch; }
+  .datasets .dataset__button {
+    margin: 10px auto;
+    width: 350px; }
+  .dataset__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .dataset__button {
+    font-size: 16px;
+    margin: 10px; }
+  .dataset__subtitle {
+    font-style: italic;
+    padding: 10px 0;
+    color: #062F4F;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.3em; }
+    .dataset__subtitle li {
+      color: black;
+      padding: 0 0 10px 10px;
+      font-style: normal; }
+    .dataset__subtitle p {
+      color: black;
+      padding-left: 10px;
+      font-style: normal; }
+    .dataset__subtitle strong {
+      font-weight: bold; }
   .dataset__variables {
     font-size: 16px; }
   .slideshow {
@@ -689,11 +709,24 @@
   .main__h1 {
     font-size: 30px;
     padding: 20px 10px; }
+  .index__section--news {
+    flex-basis: 35%; }
+  .index__section--slideshow {
+    flex-basis: 45%; }
+  .index__section--news {
+    margin: 5px;
+    padding: 5px;
+    min-width: 200px; }
+  .index__section--reservoir,
+  .index__section--map {
+    flex-basis: 48%; }
+  .index__section--map {
+    text-align: center; }
+  .figure--plain {
+    max-width: 70%; }
   .modal__sub {
     width: 1000px;
-    margin: auto; }
-  .figure--plain {
-    max-width: 70%; } }
+    margin: auto; } }
 
 /*========================================
 Constants
@@ -833,14 +866,15 @@ body {
   display: none; }
 
 .item__extra {
-  padding: 10px 0;
   border-bottom: 1px dashed #39454F;
   display: block; }
 
 .item__extra__text {
   color: black;
   line-height: 1.1em;
-  font-size: 16px; }
+  font-size: 16px;
+  display: block;
+  padding: 10px 0; }
 
 .footer {
   display: flex;
@@ -980,11 +1014,15 @@ body {
     box-shadow: 0 0 3pt 2pt #E5ECE9; }
   .item__extra {
     width: 100%;
-    padding: 5px 0;
+    padding: 0;
     line-height: 0; }
   .item__extra__text {
     font-size: 18px;
-    line-height: 20px; }
+    line-height: 20px;
+    display: block;
+    padding: 5px 0;
+    width: 100%;
+    height: 100%; }
   .header__text:hover {
     color: #a3d7ff; }
   .header__logo:hover .header__text {
