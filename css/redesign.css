@@ -120,6 +120,15 @@ Slideshow
   list-style-type: decimal;
   padding: 5px 0 0 20px; }
 
+.projects__title--clickable:hover {
+  color: #062F4F; }
+
+.projects__description--hidden {
+  display: none; }
+
+.projects__description--extra {
+  padding-bottom: 20px; }
+
 .gallery__link__container {
   display: flex;
   justify-content: space-around;
@@ -528,7 +537,7 @@ Slideshow
     font-size: 16px; }
   .projects {
     font-size: 16px;
-    padding: 0 10px; }
+    padding: 0 10px 5px 10px; }
   .projects__title {
     font-size: 18px; }
   .inner__nav {
